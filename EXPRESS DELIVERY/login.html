@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="style.css"> <!-- Link to external CSS -->
+    <script src="script.js"></script>
+</head>
+<body>
+    <style>
+        /* Centering the Login Container */
+body {
+    font-family: Arial, sans-serif;
+  
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+a{
+    color: yellow;
+}
+    </style>
+
+<div class="login-container">
+    <h2>Login</h2>
+    <form id="login-form"> <!-- Added ID -->
+        <input type="email" id="email" placeholder="Email" required> <!-- Added ID -->
+        <input type="password" id="password" placeholder="Password" required> <!-- Added ID -->
+        <button type="submit">Login</button>
+    </form>
+    <p>Don't have an account? <a href="register.html">Register here</a></p>
+</div>
+
+<script>
+    document.getElementById("login-form").addEventListener("submit", function(event) {
+        event.preventDefault(); // Prevent form submission
+
+        let email = document.getElementById("email").value;
+        let password = document.getElementById("password").value;
+
+        // Dummy authentication (Replace this with actual authentication logic)
+        let storedEmail = localStorage.getItem("email");
+        let storedPassword = localStorage.getItem("password");
+
+        if (email === storedEmail && password === storedPassword) {
+            alert("Login successful!");
+            window.location.href = "index.html"; // Redirect to index.html
+        } else {
+            alert("Invalid email or password. Please try again.");
+        }
+    });
+</script>
+
+</script>
+<div id="google_translate_element" class="tor">
+    
+    <p>translator</p> 
+ </div>
+ 
+ <script type="text/javascript">
+     function googleTranslateElementInit() {
+         new google.translate.TranslateElement({pageLanguage: 'en', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
+     }
+ </script>
+ 
+ <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+ 
+</body>
+</html>
